@@ -16,10 +16,9 @@ export class CurOfficialController {
       const res_ = await cur_official.getCurOfficialByCountry(country);
       return res.json(res_);
     } catch (e) {
-      console.log(`\nОшибка доступа к БД \n${e} \n`);
       return res
         .status(400)
-        .json({ message: `Database request error \n ${e}` });
+        .json({ message: `request error \n ${e}` });
     }
   }
 

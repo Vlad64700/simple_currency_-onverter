@@ -9,13 +9,8 @@ class api_cur_official {
   async getCurOfficialByCountry(code_counrty : string) {
 
     let res : ICur[];
-    try {
-        res = await getSource(code_counrty).getExchangeRate();
-        return res;
-    }
-    catch (e: any){
-        return e.message;
-    }
+    res = await getSource(code_counrty).getExchangeRate();
+    return res;
   }
 
 }
